@@ -159,7 +159,7 @@ impl Canon {
         match self.to_name.entry(entity) {
             Entry::Occupied(occupied) => *occupied.get(),
             Entry::Vacant(vacant) => {
-                let uuid = Uuid::new_v4();
+                let uuid = Uuid::new_v4().unwrap();
                 let name = *uuid.as_bytes();
                 vacant.insert(name);
                 self.to_id.insert(name, entity);

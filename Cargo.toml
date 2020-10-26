@@ -59,3 +59,6 @@ harness = false
 [[bench]]
 name = "insertion"
 harness = false
+
+[patch.crates-io]
+uuid = { git = "https://github.com/uuid-rs/uuid" }
